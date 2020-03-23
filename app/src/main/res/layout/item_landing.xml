@@ -9,46 +9,48 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
             android:src="@drawable/jugg" />
-    </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:orientation="vertical"></LinearLayout>
 
-            <TextView
-                android:id="@+id/txtTitleItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                tools:text="titulo" />
+        <TextView
+            android:id="@+id/txtDescItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="titulo" />
 
-            <TextView
-                android:id="@+id/txtDescItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                tools:text="titulo" />
+        <TextView
+            android:id="@+id/txtTitleItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="titulo" />
 
-            <TextView
-                android:id="@+id/txtPriceItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:textColor="@color/colorPrimary"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                tools:text="titulo" />
+        <TextView
+            android:id="@+id/txtPriceItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            tools:text="titulo" />
+
+    </LinearLayout>
 
 
-         </LinearLayout>
 
 
 
