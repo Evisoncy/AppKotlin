@@ -2,6 +2,8 @@ package com.platzi.platzistore
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.GridLayout
+import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -13,13 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        txtView.text="Hola Android Extentions"
+        rcViewLanding.layoutManager=GridLayoutManager(this, 2)
 
-      //  toastShort("Mensaje Toast corto")
-        toast("Mensaje toast corto dsde Anko")
-
-        txtView.setOnClickListener {
-            startActivity<DetailActivity>("text" to "Hola desde Anko")
+        val itemsShop =(0..20).map {
+            ItemLanding("titulo $it", "Descr $it",200.00+it)
         }
+
+        val adapter =Adapter_landing(itemsShop)
+        rcViewLanding.adapter=adapter
     }
 }
