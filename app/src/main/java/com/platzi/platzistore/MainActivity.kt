@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         txtView.text="Hola Android Extentions"
 
       //  toastShort("Mensaje Toast corto")
-        toast("Mensaje toascorto dsde Anko")
+        toast("Mensaje toast corto dsde Anko")
 
         txtView.setOnClickListener {
             startActivity<DetailActivity>("text" to "Hola desde Anko")
