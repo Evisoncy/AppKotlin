@@ -18,10 +18,11 @@ class MainActivity : AppCompatActivity() {
         rcViewLanding.layoutManager=GridLayoutManager(this, 2)
 
         val itemsShop =(0..20).map {
-            ItemLanding("titulo $it", "Descr $it",200.00+it)
+          ItemLanding("titulo $it", "Descr $it",200.00+it)
         }
 
         val adapter =Adapter_landing(itemsShop)
         rcViewLanding.adapter=adapter
+
     }
 }

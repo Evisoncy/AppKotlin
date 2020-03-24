@@ -19,29 +19,36 @@
             android:layout_margin="5dp">
 
             <ImageView
+                android:id="@+id/imgItemHeader"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
+                android:transitionName="transitionHeader"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/jugg" />
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/txtDescItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                tools:text="Descr" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
 
             <TextView
                 android:id="@+id/txtTitleItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-
+                android:transitionName="transitionTitle"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 tools:text="titulo" />
+
+            <TextView
+                android:id="@+id/txtDescItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:transitionName="transitionDesc"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                tools:text="Descr" />
 
             <TextView
                 android:id="@+id/txtPriceItem"
@@ -49,11 +56,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:layout_gravity="end"
+                android:transitionName="transitionPrice"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimary"
-                tools:text="titulo"></TextView>
-
+                tools:text="titulo"/>
         </LinearLayout>
+
+
 
 
 

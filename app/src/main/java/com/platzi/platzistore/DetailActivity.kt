@@ -3,6 +3,7 @@ package com.platzi.platzistore
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.android.synthetic.main.content_descr.*
 
 class DetailActivity : AppCompatActivity() {
 
@@ -10,9 +11,14 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        intent?.let {
-            val textFromMain: String? = it.extras?.getString("text")
-            txtDetail.text=textFromMain
+         intent?.extras?.let {
+
+            txtDetailTitulo.text = it.getString("title")
+            txtDetailDesc.text = it.getString("desc")
+            txtDetailPrice.text = "$ ${String.format("%.2f", it.getDouble("price"))}"
+            txtDetailLongDesc.text = it.getString("longDesc")
         }
+
+
     }
 }
