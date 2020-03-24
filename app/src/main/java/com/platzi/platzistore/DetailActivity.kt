@@ -16,7 +16,7 @@ class DetailActivity : AppCompatActivity() {
             txtDetailTitulo.text = it.getString("title")
             txtDetailDesc.text = it.getString("desc")
             txtDetailPrice.text = "$ ${String.format("%.2f", it.getDouble("price"))}"
-            txtDetailLongDesc.text = it.getString("longDesc")
+
         }
 
 
