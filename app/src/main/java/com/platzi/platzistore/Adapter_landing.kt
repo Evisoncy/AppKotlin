@@ -42,7 +42,7 @@ class Adapter_landing(val data:List<ItemLanding>):RecyclerView.Adapter<Adapter_l
                     val p2:Pair<View, String> = Pair.create(itemView.txtTitleItem,"transitionTitle")
                     val p3:Pair<View, String> = Pair.create(itemView.txtDescItem, "transitionDesc")
                     val p4:Pair<View, String> = Pair.create(itemView.txtPriceItem, "transitionPrice")
-                    val options= ActivityOptionsCompat.makeSceneTransitionAnimation(itemView.context as Activity,p2,p3,p4)
+                    val options= ActivityOptionsCompat.makeSceneTransitionAnimation(itemView.context as Activity p1,p2,p3,p4)
                     itemView.context.startActivity(intent, options.toBundle())
 
                 }

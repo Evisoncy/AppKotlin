@@ -12,10 +12,14 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
          intent?.extras?.let {
+             val title = it.getString("title")
+             val descr = it.getString("desc")
+             val price = it.getDouble("price")
 
-            txtDetailTitulo.text = it.getString("title")
-            txtDetailDesc.text = it.getString("desc")
-            txtDetailPrice.text = "$ ${String.format("%.2f", it.getDouble("price"))}"
+             txtDetailTitulo.text = title
+             txtDetailDesc.text = descr
+             txtDetailPrice.text = "$ ${String.format("%.2f", price)}"
+
 
         }
 
